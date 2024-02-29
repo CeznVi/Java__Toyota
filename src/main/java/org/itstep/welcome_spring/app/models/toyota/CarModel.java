@@ -16,4 +16,9 @@ import java.util.Date;
 @Table(name = "toyota_car_models")
 public class CarModel  extends BaseEntity {
     private String thumb;
+
+    @ManyToOne
+    @JoinColumn(name = "carComlect_id", nullable = false)
+    private CarComplect carComplect;
+
 }
